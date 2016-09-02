@@ -16,6 +16,9 @@
 		DBB2C1B61D34C5E1005E4980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB2C1B41D34C5E1005E4980 /* LaunchScreen.storyboard */; };
 		DBB2C1C11D34C5E1005E4980 /* BAFNetworkLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2C1C01D34C5E1005E4980 /* BAFNetworkLibraryTests.m */; };
 		DBB2C1CC1D34C5E1005E4980 /* BAFNetworkLibraryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2C1CB1D34C5E1005E4980 /* BAFNetworkLibraryUITests.m */; };
+		DBC258091D372BBA00E27006 /* BBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC258081D372BBA00E27006 /* BBaseProvider.m */; };
+		DBC2580F1D37678300E27006 /* BProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC2580E1D37678300E27006 /* BProviderManager.m */; };
+		DBC258121D3787A800E27006 /* TestProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC258111D3787A700E27006 /* TestProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,12 @@
 		DBB2C1C71D34C5E1005E4980 /* BAFNetworkLibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAFNetworkLibraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB2C1CB1D34C5E1005E4980 /* BAFNetworkLibraryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAFNetworkLibraryUITests.m; sourceTree = "<group>"; };
 		DBB2C1CD1D34C5E1005E4980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC258071D372BBA00E27006 /* BBaseProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBaseProvider.h; sourceTree = "<group>"; };
+		DBC258081D372BBA00E27006 /* BBaseProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBaseProvider.m; sourceTree = "<group>"; };
+		DBC2580D1D37678300E27006 /* BProviderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BProviderManager.h; sourceTree = "<group>"; };
+		DBC2580E1D37678300E27006 /* BProviderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BProviderManager.m; sourceTree = "<group>"; };
+		DBC258101D3787A700E27006 /* TestProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestProvider.h; sourceTree = "<group>"; };
+		DBC258111D3787A700E27006 /* TestProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,12 @@
 				DBB2C1AA1D34C5E1005E4980 /* AppDelegate.m */,
 				DBB2C1AC1D34C5E1005E4980 /* ViewController.h */,
 				DBB2C1AD1D34C5E1005E4980 /* ViewController.m */,
+				DBC258101D3787A700E27006 /* TestProvider.h */,
+				DBC258111D3787A700E27006 /* TestProvider.m */,
+				DBC258071D372BBA00E27006 /* BBaseProvider.h */,
+				DBC258081D372BBA00E27006 /* BBaseProvider.m */,
+				DBC2580D1D37678300E27006 /* BProviderManager.h */,
+				DBC2580E1D37678300E27006 /* BProviderManager.m */,
 				DBB2C1AF1D34C5E1005E4980 /* Main.storyboard */,
 				DBB2C1B21D34C5E1005E4980 /* Assets.xcassets */,
 				DBB2C1B41D34C5E1005E4980 /* LaunchScreen.storyboard */,
@@ -346,6 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB2C1AE1D34C5E1005E4980 /* ViewController.m in Sources */,
+				DBC258091D372BBA00E27006 /* BBaseProvider.m in Sources */,
+				DBC258121D3787A800E27006 /* TestProvider.m in Sources */,
+				DBC2580F1D37678300E27006 /* BProviderManager.m in Sources */,
 				DBB2C1AB1D34C5E1005E4980 /* AppDelegate.m in Sources */,
 				DBB2C1A81D34C5E1005E4980 /* main.m in Sources */,
 			);

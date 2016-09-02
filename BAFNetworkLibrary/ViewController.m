@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AFNetworking.h"
+#import "TestProvider.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    TestProvider * testProvider = [[TestProvider alloc] init];
+//    testProvider.baseValue = @"1";
+    testProvider.testValue1 = @"2";
+    testProvider.testValue2 = @"3";
+    NSDictionary * dic = [testProvider parameters];
+    NSLog(@"%@",dic);
     // Do any additional setup after loading the view, typically from a nib.
 }
 
