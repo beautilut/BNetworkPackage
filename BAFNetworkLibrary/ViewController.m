@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "TestProvider.h"
+#import "BAFRequestManager.h"
 
 @interface ViewController ()
 
@@ -21,10 +22,17 @@
     
     TestProvider * testProvider = [[TestProvider alloc] init];
 //    testProvider.baseValue = @"1";
-    testProvider.testValue1 = @"2";
+    testProvider.test = @"2";
     testProvider.testValue2 = @"3";
-    NSDictionary * dic = [testProvider parameters];
-    NSLog(@"%@",dic);
+    
+    [testProvider requestWithCompletionHandler:^(id  _Nullable response, NSError * _Nullable error) {
+        NSLog(@"%@",response);
+    }];
+    
+//    [[BAFRequestManager manager] operateWithProvider:testProvider];
+
+//    NSDictionary * dic = [testProvider parameters];
+//    NSLog(@"%@",dic);
     // Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -10,7 +10,7 @@
 
 @interface TestProvider : BBaseProvider
 
-@property (nonatomic,strong) NSString * testValue1;
+@property (nonatomic,strong) NSString * test;
 
 @property (nonatomic,strong) NSString * testValue2;
 

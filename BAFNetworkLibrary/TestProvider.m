@@ -10,4 +10,18 @@
 
 @implementation TestProvider
 
+-(id)init
+{
+    if (self = [super init]) {
+        self.method = @"test";
+    }
+    return self;
+}
+
+-(id)parseResponde:(id)responde error:(NSError *)error
+{
+    NSLog(@"hahah");
+    return responde;
+}
+
 @end

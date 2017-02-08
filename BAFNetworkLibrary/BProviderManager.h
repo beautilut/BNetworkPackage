@@ -6,15 +6,15 @@
 //  Copyright © 2016年 beautilut. All rights reserved.
 //
 
-#define baseUrl @"http://www.baidu.com"
-
-
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
 #import "BBaseProvider.h"
-
+#import "BProviderManagerRequestDelgate.h"
 
 @interface BProviderManager : NSObject
+
+@property (nonatomic , strong) id <BProviderManagerRequestDelgate> creator;
+
++(BProviderManager*)instance;
 
 -(void)sendProvider:(BBaseProvider*)provider;
 

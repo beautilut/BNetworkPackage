@@ -7,53 +7,89 @@
 //
 
 #import "BProviderManager.h"
+#import "BAFMsgCreator.h"
 
+@interface BProviderManager () <BProviderManagerResponseDelegate>
+
+@property (nonatomic , strong) NSMutableArray * providerArray; //请求数组
+
+@end
+
+static BProviderManager * providerManager = nil;
 @implementation BProviderManager
+
++(BProviderManager*)instance
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!providerManager) {
+            providerManager = [[BProviderManager alloc] init];
+        }
+    });
+    return providerManager;
+}
 
 
 -(void)sendProvider:(BBaseProvider *)provider
 {
-    if ([provider.httpMethod isEqualToString:@"POST"]) {
-        [self postWithProvider:provider];
-    }else if([provider.httpMethod isEqualToString:@"GET"]) {
-        [self getWithProvider:provider];
+    
+    //封装参数
+    NSMutableDictionary * params = [[NSMutableDictionary alloc] initWithDictionary:[provider parameters]];
+    //填充默认参数
+    [params addEntriesFromDictionary:nil];
+    
+    //请求签名
+    
+    //拼装url
+    NSString * urlString = provider.urlString;
+    
+    //判断缓存
+    id <NSCoding> cacheObject = nil;
+    
+    if (cacheObject) {
+        
+    }else{
+        //没有缓存 直接 发送请求
+        [self.creator operationWithProvider:provider withUrlString:urlString withParams:params];
     }
+    
 }
 
-//参数带在header里
--(void)postWithProvider:(BBaseProvider *)provider
+#pragma mark - BProviderManagerResponseDelegate -
+
+-(void)requestStarted:(NSObject *)request
 {
-    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     
-    //传递参数
-    NSDictionary * parameters = [provider parameters];
-    
-    //url
-    NSString * url = [NSString stringWithFormat:@"%@/%@",baseUrl,provider.method];
-    
-    [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
 }
 
-//参数带在URL里
--(void)getWithProvider:(BBaseProvider *)provider
+-(void)requestFinished:(NSObject *)request
 {
-    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     
-    NSDictionary * parameters = [provider parameters];
-    
-    [manager GET:@"" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
 }
 
+-(void)requestFailed:(NSObject *)request error:(NSError *)error
+{
+    
+}
+
+-(void)request:(NSObject *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders
+{
+    
+}
+
+#pragma mark -- setter & getter --
+
+-(id<BProviderManagerRequestDelgate>)creator
+{
+    @synchronized (self) {
+        if (!_creator) {
+            _creator = [[BAFMsgCreator alloc] init];
+            
+            _creator.responseDelegate = self;
+            
+        }
+    }
+    
+    return _creator;
+}
 @end
