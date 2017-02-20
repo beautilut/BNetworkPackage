@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BAFNetworkLibrary/new/BAFRequestManager.m"
-            timestampString = "508235303.865507"
+            filePath = "BAFNetworkLibrary/BBaseProvider.m"
+            timestampString = "508932167.178637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "-post:withProvider:"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-task:withResponse:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,12 +41,154 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BAFNetworkLibrary/ViewController.m"
-            timestampString = "508235322.816515"
+            filePath = "BAFNetworkLibrary/BAFRequestCreator.m"
+            timestampString = "508932255.601204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-requestImage:imageDatas:withProvider:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/BAFRequestCreator.m"
+            timestampString = "508932456.898523"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "-requestFile:withProvider:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BAFRequestCreator requestFile:withProvider:]"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BAFRequestCreator.m"
+                  timestampString = "509254554.388922"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[BAFRequestCreator requestFile:withProvider:]_block_invoke"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BAFRequestCreator.m"
+                  timestampString = "509254554.392774"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[BAFRequestCreator requestFile:withProvider:]_block_invoke_2"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BAFRequestCreator.m"
+                  timestampString = "509254554.39634"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/new/BAFRequestManager.m"
+            timestampString = "508932496.827757"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-doCancelAndNotification:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BAFRequestManager doCancelAndNotification:]"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/new/BAFRequestManager.m"
+                  timestampString = "509254554.4239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "214">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__Block_byref_object_copy_"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/new/BAFRequestManager.m"
+                  timestampString = "509254554.427828"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__Block_byref_object_dispose_"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/new/BAFRequestManager.m"
+                  timestampString = "509254554.430949"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/ViewController.m"
+            timestampString = "509253286.897666"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -57,13 +199,317 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BAFNetworkLibrary/BBaseProvider.m"
-            timestampString = "508235488.692427"
+            filePath = "BAFNetworkLibrary/BAFRequestCreator.m"
+            timestampString = "509013715.059402"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "-parseResponde:error:"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "-post:withProvider:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/new/BAFRequestManager.m"
+            timestampString = "509014722.03187"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "-getProvidersByOperation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/new/BAFRequestManager.m"
+            timestampString = "509014737.981652"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "-getProvidersByClass:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/new/BAFRequestManager.m"
+            timestampString = "509252439.007726"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "-sendProvider:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/new/BAFRequestManager.m"
+            timestampString = "509252441.639451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
+            landmarkName = "-task:withResponse:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/new/BAFRequestManager.m"
+            timestampString = "509252510.919316"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "-sendProvider:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/BBaseProvider.m"
+            timestampString = "509252867.706963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "-readLocalCacheWithError:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/BBaseProvider.m"
+            timestampString = "509252924.998485"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "-readLocalCacheWithCompletion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BBaseProvider(Cache) readLocalCacheWithCompletion:]"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BBaseProvider.m"
+                  timestampString = "509254554.47906"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__53-[BBaseProvider(Cache) readLocalCacheWithCompletion:]_block_invoke"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BBaseProvider.m"
+                  timestampString = "509254554.481637"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/BBaseProvider.m"
+            timestampString = "509252931.441219"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "-saveLocalCache:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BAFNetworkLibrary/ViewController.m"
+            timestampString = "509253278.847279"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/EGOCache/EGOCache.m"
+            timestampString = "509253620.800387"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "-setObject:forKey:withTimeoutInterval:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/EGOCache/EGOCache.m"
+            timestampString = "509253631.272798"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "-setData:forKey:withTimeoutInterval:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/EGOCache/EGOCache.m"
+            timestampString = "509253634.260113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "-setCacheTimeoutInterval:forKey:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EGOCache setCacheTimeoutInterval:forKey:]"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/Pods/EGOCache/EGOCache.m"
+                  timestampString = "509254554.506581"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "211">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[EGOCache setCacheTimeoutInterval:forKey:]_block_invoke"
+                  moduleName = "BAFNetworkLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/Pods/EGOCache/EGOCache.m"
+                  timestampString = "509254554.509588"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/EGOCache/EGOCache.m"
+            timestampString = "509253809.653994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-init"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/EGOCache/EGOCache.m"
+            timestampString = "509254422.414216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
+            landmarkName = "-objectForKey:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/EGOCache/EGOCache.m"
+            timestampString = "509254427.582491"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "-dataForKey:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

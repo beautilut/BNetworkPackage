@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4C65E2F7A31157CC5C5DF79A /* libPods-BAFNetworkLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB81854A35DFDBFD709EA160 /* libPods-BAFNetworkLibrary.a */; };
-		DB26D8E81D795D49006C1035 /* BAFMsgCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = DB26D8E71D795D49006C1035 /* BAFMsgCreator.m */; };
+		9780A9A0AB582ABF38A5E299 /* BProviderResultPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9780AFF49F6E193294D24BF7 /* BProviderResultPackage.m */; };
+		9780AAA549356A62AF264A87 /* BCacheInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9780A0DC35A1294F620140D2 /* BCacheInfo.m */; };
+		9780ACCF80C95EAAA26AE981 /* BLocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9780AB7F44F979E663F64E75 /* BLocalCache.m */; };
+		9780AF8ACAC9AB706EC060CB /* BDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9780A3FD61194D9BFF238E56 /* BDownloadCache.m */; };
+		DB1F782A1E55917C00246169 /* BAFRequestCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F78291E55917C00246169 /* BAFRequestCreator.m */; };
 		DBB2C1A81D34C5E1005E4980 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2C1A71D34C5E1005E4980 /* main.m */; };
 		DBB2C1AB1D34C5E1005E4980 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2C1AA1D34C5E1005E4980 /* AppDelegate.m */; };
 		DBB2C1AE1D34C5E1005E4980 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2C1AD1D34C5E1005E4980 /* ViewController.m */; };
@@ -18,7 +22,6 @@
 		DBB2C1C11D34C5E1005E4980 /* BAFNetworkLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2C1C01D34C5E1005E4980 /* BAFNetworkLibraryTests.m */; };
 		DBB2C1CC1D34C5E1005E4980 /* BAFNetworkLibraryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2C1CB1D34C5E1005E4980 /* BAFNetworkLibraryUITests.m */; };
 		DBC258091D372BBA00E27006 /* BBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC258081D372BBA00E27006 /* BBaseProvider.m */; };
-		DBC2580F1D37678300E27006 /* BProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC2580E1D37678300E27006 /* BProviderManager.m */; };
 		DBC258121D3787A800E27006 /* TestProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC258111D3787A700E27006 /* TestProvider.m */; };
 		DBFD2DA51E4973BA005F62F3 /* BAFRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFD2DA41E4973BA005F62F3 /* BAFRequestManager.m */; };
 /* End PBXBuildFile section */
@@ -43,10 +46,19 @@
 /* Begin PBXFileReference section */
 		09DC2939AF8F8D3B2149D352 /* Pods-BAFNetworkLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAFNetworkLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAFNetworkLibrary/Pods-BAFNetworkLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		5BA9412AF9F050276458BC28 /* Pods-BAFNetworkLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAFNetworkLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAFNetworkLibrary/Pods-BAFNetworkLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		9780A0DC35A1294F620140D2 /* BCacheInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCacheInfo.m; sourceTree = "<group>"; };
+		9780A3FD61194D9BFF238E56 /* BDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDownloadCache.m; sourceTree = "<group>"; };
+		9780A593744E09972B76E289 /* BProviderResultPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BProviderResultPackage.h; sourceTree = "<group>"; };
+		9780A6067417FF5723F59F2A /* BCacheInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCacheInfo.h; sourceTree = "<group>"; };
+		9780A92D2CCA66EB393D3622 /* BDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDownloadCache.h; sourceTree = "<group>"; };
+		9780A95A3DF35B2B71D712ED /* BNetworkSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNetworkSetting.h; sourceTree = "<group>"; };
+		9780AB7F44F979E663F64E75 /* BLocalCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLocalCache.m; sourceTree = "<group>"; };
+		9780AF67E2D119684361AED5 /* BLocalCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLocalCache.h; sourceTree = "<group>"; };
+		9780AFF49F6E193294D24BF7 /* BProviderResultPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BProviderResultPackage.m; sourceTree = "<group>"; };
 		AB81854A35DFDBFD709EA160 /* libPods-BAFNetworkLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAFNetworkLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB26D8E61D795D49006C1035 /* BAFMsgCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAFMsgCreator.h; sourceTree = "<group>"; };
-		DB26D8E71D795D49006C1035 /* BAFMsgCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFMsgCreator.m; sourceTree = "<group>"; };
-		DB26D8E91D796388006C1035 /* BProviderManagerRequestDelgate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BProviderManagerRequestDelgate.h; sourceTree = "<group>"; };
+		DB1F78281E55917C00246169 /* BAFRequestCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAFRequestCreator.h; sourceTree = "<group>"; };
+		DB1F78291E55917C00246169 /* BAFRequestCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFRequestCreator.m; sourceTree = "<group>"; };
+		DB26D8E91D796388006C1035 /* BProviderManagerDelgate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BProviderManagerDelgate.h; sourceTree = "<group>"; };
 		DBB2C1A31D34C5E1005E4980 /* BAFNetworkLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAFNetworkLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB2C1A71D34C5E1005E4980 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBB2C1A91D34C5E1005E4980 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,8 +77,6 @@
 		DBB2C1CD1D34C5E1005E4980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBC258071D372BBA00E27006 /* BBaseProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBaseProvider.h; sourceTree = "<group>"; };
 		DBC258081D372BBA00E27006 /* BBaseProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBaseProvider.m; sourceTree = "<group>"; };
-		DBC2580D1D37678300E27006 /* BProviderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BProviderManager.h; sourceTree = "<group>"; };
-		DBC2580E1D37678300E27006 /* BProviderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BProviderManager.m; sourceTree = "<group>"; };
 		DBC258101D3787A700E27006 /* TestProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestProvider.h; sourceTree = "<group>"; };
 		DBC258111D3787A700E27006 /* TestProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestProvider.m; sourceTree = "<group>"; };
 		DBFC3DC51D7D22D000A36183 /* BDefineTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDefineTool.h; sourceTree = "<group>"; };
@@ -148,11 +158,6 @@
 				DBB2C1AD1D34C5E1005E4980 /* ViewController.m */,
 				DBC258101D3787A700E27006 /* TestProvider.h */,
 				DBC258111D3787A700E27006 /* TestProvider.m */,
-				DBC2580D1D37678300E27006 /* BProviderManager.h */,
-				DBC2580E1D37678300E27006 /* BProviderManager.m */,
-				DB26D8E91D796388006C1035 /* BProviderManagerRequestDelgate.h */,
-				DB26D8E61D795D49006C1035 /* BAFMsgCreator.h */,
-				DB26D8E71D795D49006C1035 /* BAFMsgCreator.m */,
 				DBFD2D9F1E4971EA005F62F3 /* NewTest */,
 				DBB2C1AF1D34C5E1005E4980 /* Main.storyboard */,
 				DBB2C1B21D34C5E1005E4980 /* Assets.xcassets */,
@@ -192,11 +197,23 @@
 		DBFD2D9F1E4971EA005F62F3 /* NewTest */ = {
 			isa = PBXGroup;
 			children = (
+				DB26D8E91D796388006C1035 /* BProviderManagerDelgate.h */,
 				DBFC3DC51D7D22D000A36183 /* BDefineTool.h */,
 				DBC258071D372BBA00E27006 /* BBaseProvider.h */,
 				DBC258081D372BBA00E27006 /* BBaseProvider.m */,
 				DBFD2DA31E4973BA005F62F3 /* BAFRequestManager.h */,
 				DBFD2DA41E4973BA005F62F3 /* BAFRequestManager.m */,
+				DB1F78281E55917C00246169 /* BAFRequestCreator.h */,
+				DB1F78291E55917C00246169 /* BAFRequestCreator.m */,
+				9780AB7F44F979E663F64E75 /* BLocalCache.m */,
+				9780AF67E2D119684361AED5 /* BLocalCache.h */,
+				9780A0DC35A1294F620140D2 /* BCacheInfo.m */,
+				9780A6067417FF5723F59F2A /* BCacheInfo.h */,
+				9780A3FD61194D9BFF238E56 /* BDownloadCache.m */,
+				9780A92D2CCA66EB393D3622 /* BDownloadCache.h */,
+				9780A95A3DF35B2B71D712ED /* BNetworkSetting.h */,
+				9780AFF49F6E193294D24BF7 /* BProviderResultPackage.m */,
+				9780A593744E09972B76E289 /* BProviderResultPackage.h */,
 			);
 			name = NewTest;
 			sourceTree = "<group>";
@@ -372,7 +389,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -386,10 +403,13 @@
 				DBC258091D372BBA00E27006 /* BBaseProvider.m in Sources */,
 				DBC258121D3787A800E27006 /* TestProvider.m in Sources */,
 				DBFD2DA51E4973BA005F62F3 /* BAFRequestManager.m in Sources */,
-				DB26D8E81D795D49006C1035 /* BAFMsgCreator.m in Sources */,
-				DBC2580F1D37678300E27006 /* BProviderManager.m in Sources */,
 				DBB2C1AB1D34C5E1005E4980 /* AppDelegate.m in Sources */,
 				DBB2C1A81D34C5E1005E4980 /* main.m in Sources */,
+				DB1F782A1E55917C00246169 /* BAFRequestCreator.m in Sources */,
+				9780ACCF80C95EAAA26AE981 /* BLocalCache.m in Sources */,
+				9780AAA549356A62AF264A87 /* BCacheInfo.m in Sources */,
+				9780AF8ACAC9AB706EC060CB /* BDownloadCache.m in Sources */,
+				9780A9A0AB582ABF38A5E299 /* BProviderResultPackage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

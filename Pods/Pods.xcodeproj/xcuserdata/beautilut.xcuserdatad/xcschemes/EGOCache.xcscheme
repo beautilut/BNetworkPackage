@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5D8FDA312FAB15137BBA03CF06D3FCA5'
-               BlueprintName = 'Pods-BAFNetworkLibrary'
+               BlueprintIdentifier = '2D748A1E7B7DFC967C340F9954065967'
+               BlueprintName = 'EGOCache'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-BAFNetworkLibrary.a'>
+               BuildableName = 'libEGOCache.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -14,14 +14,16 @@
 {
     if (self = [super init]) {
         self.method = @"test";
+        [self useCacheInfo:YES];
     }
     return self;
 }
 
 -(id)parseResponde:(id)responde error:(NSError *)error
 {
-    NSLog(@"hahah");
-    return responde;
+    NSDictionary * dic = responde;
+    
+    return @{@"123":@"321"};
 }
 
 @end

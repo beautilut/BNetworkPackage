@@ -20,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString * path = NSHomeDirectory();
+    
+    
     TestProvider * testProvider = [[TestProvider alloc] init];
 //    testProvider.baseValue = @"1";
     testProvider.test = @"2";

@@ -1,4 +1,4 @@
-//
+
 //  BAFRequestManager.m
 //  BAFNetworkLibrary
 //
@@ -7,10 +7,14 @@
 //
 
 #import "BAFRequestManager.h"
+#import "BAFRequestCreator.h"
 
-@interface BAFRequestManager ()
 
-@property (nonatomic , strong) AFHTTPSessionManager * manager;
+
+@interface BAFRequestManager () <BProviderManagerProgressDelegate , BProviderManagerResponseDelegate>
+
+@property (nonatomic , readonly) NSMutableDictionary * recordCacheDictionary;
+@property (nonatomic , readonly) NSMutableArray * providerArray;
 
 @end
 
@@ -20,132 +24,245 @@
 +(BAFRequestManager*)manager
 {
     static dispatch_once_t onceToken;
-    static BAFRequestManager * shareManager;
+    static BAFRequestManager * defaultManager = nil;
     dispatch_once(&onceToken, ^{
-        shareManager = [[BAFRequestManager alloc] init];
+        defaultManager = [[BAFRequestManager alloc] init];
     });
-    return shareManager;
+    return defaultManager;
 }
 
-
-#pragma mark  -
--(id)init
+-(id<BProviderManagerRequestDelgate>)creator
 {
-    if (self = [super init]) {
-        _manager = [AFHTTPSessionManager manager];
+    @synchronized (self) {
         
+        if(!_creator) {
+            _creator = [[BAFRequestCreator alloc] init];
+            
+            _creator.responseDelegate = self;
+            _creator.progressDelegate = self;
+        }
         
-//        _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        
-        _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html",@"text/plain", nil];
-        
-//        _manager.requestSerializer.timeoutInterval = 30;
+    }
+    return _creator;
+}
+
+-(id)init {
+    if(self = [super init]) {
+        _providerArray = [[NSMutableArray alloc] init];
+        _recordCacheDictionary = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
 
+#pragma mark  - cancel provider -
 
-
-#pragma mark - base methods -
-
-//get 请求
--(NSURLSessionDataTask*)get:(NSString*)urlString
-               withProvider:(BBaseProvider*)provider
+-(void)doCancelAndNotification:(BBaseProvider *)provider
 {
-    NSDictionary * parameters = [provider parameters];
-    
-    NSURLSessionDataTask * requestSession = [_manager GET:urlString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        [provider progress:downloadProgress];
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [provider task:task withResponse:responseObject];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [provider task:task withError:error];
-    }];
-    
-    return requestSession;
+    provider.sendStatus = EBProviderStatusIdle;
+    [self.creator cancelRequest:provider.operation];
+    provider.operation = nil;
+
+    __block typeof(self) wself = self;
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSError * error = [NSError errorWithDomain:BHTTPRequestErrorDomain
+                                              code:BNetworkErrorCancelled
+                                          userInfo:@{NSLocalizedDescriptionKey : @"请求已被取消"}];
+        BProviderResultPackage * package = [wself packageWithResult:nil error:error];
+        [wself provider:provider responedComplete:package];
+    });
 }
 
-//post 请求
--(NSURLSessionDataTask*)post:(NSString*)urlString
-                withProvider:(BBaseProvider*)provider
+-(void)cancelAllProvider
 {
-    NSDictionary * parameters = [provider parameters];
-    
-    NSURLSessionDataTask * requestSession = [_manager POST:urlString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-        [provider progress:uploadProgress];
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [provider task:task withResponse:responseObject];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [provider task:task withError:error];
-    }];
-    return requestSession;
-}
-
-//上传图片
--(NSURLSessionDataTask*)requestImage:(NSString*)urlString
-                          imageDatas:(NSArray*)dataArray
-                        withProvider:(BBaseProvider*)provider;
-{
-    
-    NSURLSessionDataTask * requestTask = [_manager POST:urlString parameters:provider.parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        
-        for (int i = 0 ; i < dataArray.count ; i ++) {
-            //上传时使用系统事件作为文件名
-            NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
-            formatter.dateFormat = @"yyyyMMddHHmmss";
-            NSString * str = [formatter stringFromDate:[NSDate date]];
-            NSString * fileName = [NSString stringWithFormat:@"%@.png",str];
-            NSString * name = [NSString stringWithFormat:@"image_%d.png",i];
-            
-            NSData * imageData = dataArray[i];
-            
-            [formData appendPartWithFileData:imageData name:name fileName:fileName mimeType:@"image/png"];
+    BBaseProvider * tmpProvider;
+    @synchronized (self) {
+        for (tmpProvider in _providerArray) {
+            [self doCancelAndNotification:tmpProvider];
         }
-        
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        [provider progress:uploadProgress];
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [provider task:task withResponse:responseObject];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [provider task:task withError:error];
-    }];
-    
-    return requestTask;
-}
-
-//上传文件
--(NSURLSessionDataTask*)requestFile:(NSString*)urlString
-                   withProvider:(BBaseProvider*)provider
-{
-    NSURLSessionDataTask * requestTask = [_manager POST:urlString parameters:provider.parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-//        formData appendPartWithFileData:provider.fileData  name:<#(nonnull NSString *)#> fileName:<#(nonnull NSString *)#> mimeType:<#(nonnull NSString *)#>
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        [provider progress:uploadProgress];
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [provider task:task withResponse:responseObject];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [provider task:task withError:error];
-    }];
-    
-    return requestTask;
-}
-
-#pragma mark methods
-
--(NSObject*)operateWithProvider:(BBaseProvider*)provider
-{
-    
-    if ([provider.httpMethod isEqualToString:HttpMethodGET]) {
-        NSURLSessionDataTask * task = [self get:provider.urlString withProvider:provider];
-        [task resume];
-        return  task;
-    }else if ([provider.httpMethod isEqualToString:HttpMethodPOST]) {
-        NSURLSessionDataTask * task = [self post:provider.urlString withProvider:provider];
-        [task resume];
-        return task;
+        if ( [_providerArray count] > 0){
+            [_providerArray removeAllObjects];
+        }
     }
+}
+
+-(void)cancelProviderInArray:(NSArray*)providers
+{
+    @synchronized (self) {
+        for (BBaseProvider * tmpProvider in providers) {
+            [self cancelProvider:tmpProvider];
+        }
+    }
+}
+
+-(void)cancelProvider:(BBaseProvider *)provider
+{
+    NSMutableArray * removes = [[NSMutableArray alloc] init];
+    BBaseProvider * tmpProvider;
+    @synchronized (self) {
+        for (tmpProvider in _providerArray) {
+            if (tmpProvider == provider) {
+                [self doCancelAndNotification:tmpProvider];
+                [removes addObject:tmpProvider];
+            }
+        }
+
+        if ( [removes count] > 0) {
+            [_providerArray removeObjectsInArray:removes];
+        }
+    }
+}
+
+-(void)cancelProviderBySender:(id)sender
+{
+    NSMutableArray * removes = [[NSMutableArray alloc] init];
+    BBaseProvider * tmpProvider ;
+    @synchronized (self) {
+        for (tmpProvider in _providerArray) {
+            if (sender == tmpProvider.sender) {
+                [self doCancelAndNotification:tmpProvider];
+                [removes addObject:tmpProvider];
+            }
+        }
+
+        if ( [removes count] > 0) {
+            [_providerArray removeObjectsInArray:removes];
+        }
+    }
+}
+
+-(BProviderResultPackage *)packageWithResult:(id)result error:(NSError*)error
+{
+    BProviderResultPackage * package = [[BProviderResultPackage alloc] init];
+    package.providerResult = result;
+    package.providerError = error;
+    package.isUseCache = NO;
+    return package;
+}
+
+#pragma mark - find provider -
+-(NSArray *)allProviders
+{
+    @synchronized (self) {
+        return _providerArray;
+    }
+}
+
+-(NSArray *)getProviderByBlock:(SelectBlock )selectBlock
+{
+    NSMutableArray * providers = [[NSMutableArray alloc] init];
+    @synchronized (self) {
+        if (selectBlock) {
+            BBaseProvider * tmpProvider;
+            for(tmpProvider in _providerArray){
+                if (selectBlock(tmpProvider)){
+                    [providers addObject:tmpProvider];
+                }
+            }
+        }
+    }
+    return providers;
+}
+
+-(NSArray*)getProvidersBySender:(id)sender
+{
+    NSMutableArray * providers = [[NSMutableArray alloc] init];
+    BBaseProvider * tmpProvider;
+    @synchronized (self) {
+        for (tmpProvider in _providerArray) {
+            if(sender == tmpProvider.sender) {
+                [providers addObject:tmpProvider];
+            }
+        }
+    }
+    return providers;
+}
+
+-(NSArray *)getProvidersByClass:(Class)providerClass
+{
+    NSMutableArray * providers = [[NSMutableArray alloc] init];
+    BBaseProvider * tmpProvider;
+    @synchronized (self) {
+        for(tmpProvider in _providerArray) {
+            if ( [tmpProvider isKindOfClass:providerClass] ){
+                [providers addObject:tmpProvider];
+            }
+        }
+    }
+    return providers;
+}
+
+-(NSArray *)getProvidersByOperation:(NSObject *)operation
+{
+    NSMutableArray *providers = [[NSMutableArray alloc] init];
+    BBaseProvider * tmpProvider;
+    @synchronized (self) {
+        for (tmpProvider in _providerArray) {
+            if (operation == tmpProvider.operation) {
+                [providers addObject:tmpProvider];
+            }
+        }
+    }
+    return providers;
+}
+
+#pragma mark - sender -
+-(void)sendProvider:(BBaseProvider *)provider
+{
+    [provider cancelProvider];
+
+    @synchronized (self) {
+        [_providerArray addObject:provider];
+    }
+
+    id<NSCoding> cacheObject = nil;
+    if(provider.cache && (provider.cache.cachePolicy == EBCachePolicyCacheAlwaysRead || provider.cache.cachePolicy == EBCachePolicyCacheFirst))
+    {
+        NSError * error = nil;
+        cacheObject = [provider readLocalCacheWithError:error];
+        if (error && (EBCachePolicyCacheFirst == provider.cache.cachePolicy)) {
+            cacheObject = nil;
+        }
+    }
+
+    if (!cacheObject) {
+        [self.creator operateWithProvider:provider];
+    }else {
+        [provider task:nil withResponse:cacheObject];
+    }
+}
+
+#pragma mark  -- response Handler -
+-(void)provider:(BBaseProvider *)provider withProgress:(NSProgress *)progress
+{
     
-    return nil;
+}
+
+-(void)task:(NSURLSessionDataTask *)task withError:(id)error
+{
+    
+}
+
+-(void)task:(NSURLSessionDataTask *)task withResponse:(id)response
+{
+    BBaseProvider * provider = [[self getProvidersByOperation:task] firstObject];
+
+    @synchronized (self) {
+        [_providerArray removeObject:provider];
+    }
+
+    [provider saveLocalCache:response];
+
+    [provider task:task withResponse:response];
+}
+
+#pragma mark  - msg handler -
+
+
+
+-(void)provider:(BBaseProvider *)provider responedComplete:(BProviderResultPackage *)bProviderResultPackage
+{
+
 }
 
 @end
