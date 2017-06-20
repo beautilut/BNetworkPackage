@@ -15,7 +15,7 @@ static BLocalCache * _instance;
     NSFileManager * pFileManager = [NSFileManager defaultManager];
     NSURL *containerURL = nil;
 
-    if ( 0 && [pFileManager respondsToSelector:@selector(containerURLForSecurityApplicationGroupIdentifier:)]) {
+    if ( /* DISABLES CODE */ (0) && [pFileManager respondsToSelector:@selector(containerURLForSecurityApplicationGroupIdentifier:)]) {
         containerURL = [pFileManager containerURLForSecurityApplicationGroupIdentifier:SubNameForCache];
         containerURL = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Library/Caches/"]];
     }else {

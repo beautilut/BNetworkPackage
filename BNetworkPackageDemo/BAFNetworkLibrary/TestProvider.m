@@ -21,7 +21,7 @@
 
 -(id)parseResponde:(id)responde error:(NSError *)error
 {
-    NSDictionary * dic = responde;
+//    NSDictionary * dic = responde;
     
     return @{@"123":@"321"};
 }

@@ -42,10 +42,10 @@ static NSString *const _Nullable HttpMethodPOST = @"POST";
 @interface BBaseProvider : NSObject
 
 //持有状态
-@property(nonatomic , weak) NSObject *operation; //创建请求的 operation ， AF为NSURLSessionDataTask
+@property(nonatomic , weak) NSObject * _Nullable operation; //创建请求的 operation ， AF为NSURLSessionDataTask
 @property(nonatomic , assign) EBProviderPriority requestPriority; //请求优先级
 @property(nonatomic , assign) EBProviderStatus sendStatus; //发送状态
-@property(nonatomic , weak) id sender; //发送对象
+@property(nonatomic , weak) id _Nullable sender; //发送对象
 
 //请求设置
 @property(nonatomic , strong) NSString *_Nullable method; //请求具体方法
@@ -66,7 +66,7 @@ static NSString *const _Nullable HttpMethodPOST = @"POST";
 
 //缓存
 @property(nonatomic , strong) BCacheInfo * _Nullable cache; //保存的缓存
-@property (nonatomic , strong) BProviderResultPackage * resultPackage; //返回的数据
+@property (nonatomic , strong) BProviderResultPackage * _Nullable resultPackage; //返回的数据
 @property (nonatomic , readonly) BOOL isUsedCacheData ; //是否使用了缓存数据
 
 
@@ -103,16 +103,16 @@ static NSString *const _Nullable HttpMethodPOST = @"POST";
 
 -(void)useCacheInfo:(BOOL)useCache;
 
--(void)useDownloadCache:(BDownloadCache *)downloadCache
+-(void)useDownloadCache:(BDownloadCache *_Nullable)downloadCache
             cacheSecond:(NSTimeInterval)cacheSecond;
 
--(void)useDownloadCache:(BDownloadCache *)downloadCache
+-(void)useDownloadCache:(BDownloadCache *_Nullable)downloadCache
             cacheSecond:(NSTimeInterval)cacheSecond
             cachePolicy:(EBCachePolicy)cachePolicy;
 
--(void)readLocalCacheWithCompletion:(ReadCacheCompletion)completion;
+-(void)readLocalCacheWithCompletion:(ReadCacheCompletion _Nullable )completion;
 
--(void)saveLocalCache:(id<NSCoding>)cacheObject completion:(SaveCacheCompletion)completion;
+-(void)saveLocalCache:(id <NSCoding>)cacheObject completion:(SaveCacheCompletion _Nullable )completion;
 
 - (id <NSCoding> _Nullable)readLocalCache;
 

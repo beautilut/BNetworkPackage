@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString * path = NSHomeDirectory();
+//    NSString * path = NSHomeDirectory();
     
     
     TestProvider * testProvider = [[TestProvider alloc] init];
@@ -64,7 +64,7 @@
 {
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     
-    NSMutableDictionary * parameters = @{@"":@"",@"":@""};
+    NSMutableDictionary * parameters = [NSMutableDictionary dictionary];//@{@"":@"",@"":@""};
     
     [manager POST:@"" parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
