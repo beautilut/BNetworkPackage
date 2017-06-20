@@ -28,6 +28,11 @@ static BLocalCache * _instance;
     return [BLocalCache currentCacheForPath:containerURL.path];
 }
 
+-(BOOL)cacheIsExpiredWithKey:(NSString *)key
+{
+    return YES;
+}
+
 +(BLocalCache *)currentCacheForPath:(NSString *)cachePath {
 
     @synchronized (self) {

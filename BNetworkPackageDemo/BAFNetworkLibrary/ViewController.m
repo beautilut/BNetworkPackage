@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "TestProvider.h"
-#import "BAFRequestManager.h"
+
 
 @interface ViewController ()
 

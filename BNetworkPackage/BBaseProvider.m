@@ -166,7 +166,7 @@
     });
 }
 
--(void)saveLocalCache:(id<NSCoding>)cacheObject completion:(SaveCacheCompletion)completion
+-(void)saveLocalCache:(id <NSCoding>)cacheObject completion:(SaveCacheCompletion)completion
 {
     dispatch_async (dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT , 0) , ^{
         BOOL success = [self saveLocalCache:cacheObject];

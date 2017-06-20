@@ -65,53 +65,6 @@
             endingLineNumber = "171"
             landmarkName = "-requestFile:withProvider:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BAFRequestCreator requestFile:withProvider:]"
-                  moduleName = "BAFNetworkLibrary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BAFRequestCreator.m"
-                  timestampString = "509254554.388922"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "172"
-                  endingLineNumber = "172"
-                  offsetFromSymbolStart = "272">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__46-[BAFRequestCreator requestFile:withProvider:]_block_invoke"
-                  moduleName = "BAFNetworkLibrary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BAFRequestCreator.m"
-                  timestampString = "509254554.392774"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "172"
-                  endingLineNumber = "172"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__46-[BAFRequestCreator requestFile:withProvider:]_block_invoke_2"
-                  moduleName = "BAFNetworkLibrary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BAFRequestCreator.m"
-                  timestampString = "509254554.39634"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "173"
-                  endingLineNumber = "173"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -128,53 +81,6 @@
             endingLineNumber = "65"
             landmarkName = "-doCancelAndNotification:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BAFRequestManager doCancelAndNotification:]"
-                  moduleName = "BAFNetworkLibrary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/new/BAFRequestManager.m"
-                  timestampString = "509254554.4239"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "214">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__Block_byref_object_copy_"
-                  moduleName = "BAFNetworkLibrary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/new/BAFRequestManager.m"
-                  timestampString = "509254554.427828"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__Block_byref_object_dispose_"
-                  moduleName = "BAFNetworkLibrary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/new/BAFRequestManager.m"
-                  timestampString = "509254554.430949"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -184,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BAFNetworkLibrary/ViewController.m"
-            timestampString = "509253286.897666"
+            timestampString = "519642073.652939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -319,38 +225,6 @@
             endingLineNumber = "158"
             landmarkName = "-readLocalCacheWithCompletion:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BBaseProvider(Cache) readLocalCacheWithCompletion:]"
-                  moduleName = "BAFNetworkLibrary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BBaseProvider.m"
-                  timestampString = "509254554.47906"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "47">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__53-[BBaseProvider(Cache) readLocalCacheWithCompletion:]_block_invoke"
-                  moduleName = "BAFNetworkLibrary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BAFNetworkLibrary/BBaseProvider.m"
-                  timestampString = "509254554.481637"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "15">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -376,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BAFNetworkLibrary/ViewController.m"
-            timestampString = "509253278.847279"
+            timestampString = "519642073.652939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -439,8 +313,8 @@
                   symbolName = "-[EGOCache setCacheTimeoutInterval:forKey:]"
                   moduleName = "BAFNetworkLibrary"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/Pods/EGOCache/EGOCache.m"
-                  timestampString = "509254554.506581"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BNetworkPackageDemo/Pods/EGOCache/EGOCache.m"
+                  timestampString = "519642074.975206"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "186"
@@ -454,8 +328,8 @@
                   symbolName = "__43-[EGOCache setCacheTimeoutInterval:forKey:]_block_invoke"
                   moduleName = "BAFNetworkLibrary"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/Pods/EGOCache/EGOCache.m"
-                  timestampString = "509254554.509588"
+                  urlString = "file:///Users/beautilut/%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93/AF%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93/BNetworkPackageDemo/Pods/EGOCache/EGOCache.m"
+                  timestampString = "519642074.978359"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "186"

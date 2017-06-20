@@ -112,7 +112,7 @@ static NSString *const _Nullable HttpMethodPOST = @"POST";
 
 -(void)readLocalCacheWithCompletion:(ReadCacheCompletion _Nullable )completion;
 
--(void)saveLocalCache:(id <NSCoding>)cacheObject completion:(SaveCacheCompletion _Nullable )completion;
+-(void)saveLocalCache:(id <NSCoding> _Nonnull )cacheObject completion:(SaveCacheCompletion _Nullable )completion;
 
 - (id <NSCoding> _Nullable)readLocalCache;
 

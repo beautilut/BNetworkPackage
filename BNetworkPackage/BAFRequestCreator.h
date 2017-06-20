@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 #import "BDefineTool.h"
 #import "BProviderManagerDelgate.h"
 

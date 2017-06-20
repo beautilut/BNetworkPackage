@@ -3,7 +3,7 @@
 // Copyright (c) 2017 beautilut. All rights reserved.
 //
 
-#import "EGOCache.h"
+#import <EGOCache/EGOCache.h>
 
 @interface BLocalCache : EGOCache
 
