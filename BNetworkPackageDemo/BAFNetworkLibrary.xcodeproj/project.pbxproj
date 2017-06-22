@@ -289,6 +289,7 @@
 				TargetAttributes = {
 					DBB2C1A21D34C5E0005E4980 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 52Z7U3B7AH;
 					};
 					DBB2C1BB1D34C5E1005E4980 = {
 						CreatedOnToolsVersion = 7.3;
@@ -556,6 +557,7 @@
 			baseConfigurationReference = 5BA9412AF9F050276458BC28 /* Pods-BAFNetworkLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 52Z7U3B7AH;
 				INFOPLIST_FILE = BAFNetworkLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = beautilut.BAFNetworkLibrary;
@@ -568,6 +570,7 @@
 			baseConfigurationReference = 09DC2939AF8F8D3B2149D352 /* Pods-BAFNetworkLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 52Z7U3B7AH;
 				INFOPLIST_FILE = BAFNetworkLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = beautilut.BAFNetworkLibrary;

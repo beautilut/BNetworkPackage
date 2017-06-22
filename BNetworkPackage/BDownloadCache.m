@@ -4,6 +4,7 @@
 //
 
 #import "BDownloadCache.h"
+#import <CommonCrypto/CommonHMAC.h>
 
 static NSMutableDictionary *cacheDictionary = nil;
 

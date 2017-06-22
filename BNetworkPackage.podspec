@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -120,7 +120,8 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
-  s.frameworks = "UIKit", "Foundation" , "CommonCrypto" , "objc"
+  s.frameworks = "UIKit", "Foundation" , "CoreGraphics" , "MobileCoreServices" , "Security" , "SystemConfiguration"
+
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -138,4 +139,5 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
   s.dependency "AFNetworking"
   s.dependency "EGOCache"
+
 end
